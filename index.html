@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> Mach Consults </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="icon" href="assets/css/images/mach_logo_white.jpg" type="image/png">
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+
+            <!-- Header -->
+            <header id="header">
+                <h1>Mach Management Solutions (PTY)</h1>
+                <p>Artificial Intelligence (AI) &nbsp;&bull;&nbsp; Project Management &nbsp;&bull;&nbsp; Chemical Engineering (Process Improvement)</p>
+                <nav>
+                    <ul>
+                        <li><a href="https://za.linkedin.com/company/mach-management-solutions" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://surveyheart.com/form/66489ce89ea2876600f85327" class="icon Users & People fa-address-card"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" id="chatToggle" class="icon chat fa-comment-alt"><span class="label">Chat</span></a></li>
+						<li><a href="https://wa.me/+27780927119" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+						<li><a href="mailto:machconsults@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Chatbox -->
+            <div id="chatBox" style="display: none;">
+                <div id="chatHeader">
+                    <div id="chatTitle">Chat with us</div>
+                    <div id="chatClose" onclick="toggleChat()">×</div>
+                </div>
+                <div id="chatMessages"></div>
+                <input id="chatInput" type="text" placeholder="Type a message..." />
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <span class="copyright">&copy; Design: Lubula Paulo Chikwekwe <a href="https://www.linkedin.com/in/lubula-paul-chikwekwe-34205611a/">LinkedIn</a>.</span>
+            </footer>
+
+        </div>
+    </div>
+    <script src="assets/js/chatbot.js"></script>
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+        document.getElementById("chatToggle").addEventListener("click", toggleChat);
+
+        function toggleChat() {
+            var chatBox = document.getElementById("chatBox");
+            if (chatBox.style.display === "none" || chatBox.style.display === "") {
+                chatBox.style.display = "block";
+            } else {
+                chatBox.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
